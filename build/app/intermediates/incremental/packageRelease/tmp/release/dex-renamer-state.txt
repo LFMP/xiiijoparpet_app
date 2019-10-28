@@ -1,4 +1,0 @@
-#Mon Oct 14 16:32:37 BRT 2019
-base.0=/home/lfmp/Downloads/GitHub/secomp_app/build/app/intermediates/transforms/dexMerger/release/0
-path.0=classes.dex
-renamed.0=classes.dex

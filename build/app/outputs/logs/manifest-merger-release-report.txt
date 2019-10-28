@@ -1,0 +1,104 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:1:1-37:12
+INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:1:1-37:12
+INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:1:1-37:12
+INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:1:1-37:12
+MERGED from [:shared_preferences] /home/lfmp/Downloads/GitHub/joparpet_app/build/shared_preferences/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:2:1-7:12
+MERGED from [:qrcode_reader] /home/lfmp/Downloads/GitHub/joparpet_app/build/qrcode_reader/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:2:1-20:12
+MERGED from [com.dlazaro66.qrcodereaderview:qrcodereaderview:2.0.2] /home/lfmp/.gradle/caches/transforms-1/files-1.1/qrcodereaderview-2.0.2.aar/2143d7d0bc8d20b7e3dca83ffdf86de4/AndroidManifest.xml:2:1-12:12
+INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:1:1-37:12
+INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:1:1-37:12
+INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:1:1-37:12
+	package
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:2:5-49
+		INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:1:1-37:12
+		INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:1:1-37:12
+		INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:10:5-66
+	android:name
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:10:22-64
+uses-permission#android.permission.CAMERA
+ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:11:5-65
+MERGED from [:qrcode_reader] /home/lfmp/Downloads/GitHub/joparpet_app/build/qrcode_reader/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:11:5-65
+MERGED from [:qrcode_reader] /home/lfmp/Downloads/GitHub/joparpet_app/build/qrcode_reader/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:11:5-65
+	android:name
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:11:22-62
+application
+ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:13:5-36:19
+MERGED from [:qrcode_reader] /home/lfmp/Downloads/GitHub/joparpet_app/build/qrcode_reader/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:13:5-18:19
+MERGED from [:qrcode_reader] /home/lfmp/Downloads/GitHub/joparpet_app/build/qrcode_reader/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:13:5-18:19
+	android:label
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:15:9-38
+	android:icon
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:16:9-43
+	android:name
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:14:9-57
+activity#com.petinformaticauem.xiiijoparpet.MainActivity
+ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:17:9-35:20
+	android:launchMode
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:19:13-43
+	android:hardwareAccelerated
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:22:13-47
+	android:windowSoftInputMode
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:23:13-55
+	android:configChanges
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:21:13-144
+	android:theme
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:20:13-47
+	android:name
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:18:13-41
+meta-data#io.flutter.app.android.SplashScreenUntilFirstFrame
+ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:28:13-30:40
+	android:value
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:30:17-37
+	android:name
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:29:17-82
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:31:13-34:29
+action#android.intent.action.MAIN
+ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:32:17-68
+	android:name
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:32:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:33:17-76
+	android:name
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml:33:27-74
+uses-sdk
+INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml
+MERGED from [:shared_preferences] /home/lfmp/Downloads/GitHub/joparpet_app/build/shared_preferences/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] /home/lfmp/Downloads/GitHub/joparpet_app/build/shared_preferences/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:qrcode_reader] /home/lfmp/Downloads/GitHub/joparpet_app/build/qrcode_reader/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:7:5-9:41
+MERGED from [:qrcode_reader] /home/lfmp/Downloads/GitHub/joparpet_app/build/qrcode_reader/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:7:5-9:41
+MERGED from [com.dlazaro66.qrcodereaderview:qrcodereaderview:2.0.2] /home/lfmp/.gradle/caches/transforms-1/files-1.1/qrcodereaderview-2.0.2.aar/2143d7d0bc8d20b7e3dca83ffdf86de4/AndroidManifest.xml:8:5-10:41
+MERGED from [com.dlazaro66.qrcodereaderview:qrcodereaderview:2.0.2] /home/lfmp/.gradle/caches/transforms-1/files-1.1/qrcodereaderview-2.0.2.aar/2143d7d0bc8d20b7e3dca83ffdf86de4/AndroidManifest.xml:8:5-10:41
+INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/lfmp/Downloads/GitHub/joparpet_app/android/app/src/main/AndroidManifest.xml
+activity#com.matheusvillela.flutter.plugins.qrcodereader.QRScanActivity
+ADDED from [:qrcode_reader] /home/lfmp/Downloads/GitHub/joparpet_app/build/qrcode_reader/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:14:9-17:63
+	android:configChanges
+		ADDED from [:qrcode_reader] /home/lfmp/Downloads/GitHub/joparpet_app/build/qrcode_reader/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:16:13-96
+	android:theme
+		ADDED from [:qrcode_reader] /home/lfmp/Downloads/GitHub/joparpet_app/build/qrcode_reader/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:17:13-60
+	android:name
+		ADDED from [:qrcode_reader] /home/lfmp/Downloads/GitHub/joparpet_app/build/qrcode_reader/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:15:13-90

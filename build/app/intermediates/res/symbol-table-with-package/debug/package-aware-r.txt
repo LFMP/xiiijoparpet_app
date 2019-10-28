@@ -1,0 +1,6 @@
+com.petinformaticauem.xiiijoparpet
+drawable launch_background
+id activity_qr_read_reader
+layout activity_qr_read
+mipmap ic_launcher
+style LaunchTheme

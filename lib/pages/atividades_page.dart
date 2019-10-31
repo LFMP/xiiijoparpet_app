@@ -13,46 +13,36 @@ import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
 // Pages
 import 'package:joparpet_app/pages/turmas_page.dart';
 
-class AtividadesPage extends StatefulWidget{
-
+class AtividadesPage extends StatefulWidget {
   createState() => _AtividadesPageState();
 }
 
-class _AtividadesPageState extends State<AtividadesPage>{
-
+class _AtividadesPageState extends State<AtividadesPage> {
   final _searchController = TextEditingController();
   Widget _appBarSearchTitle;
   IconData _searchIcon;
   String _searchQuery;
-  
+
   @override
   void initState() {
     super.initState();
-    _searchController.addListener(() => setState((){
-      _searchQuery = _searchController.text;
-    }));
+    _searchController.addListener(() => setState(() {
+          _searchQuery = _searchController.text;
+        }));
     _searchIcon = Icons.search;
-    _appBarSearchTitle =  TextField(
+    _appBarSearchTitle = TextField(
       controller: _searchController,
       decoration: InputDecoration(
-        prefixIcon: Icon(
-          Icons.search,
-          color: AppStyle.colorWhite
-        ),
-        hintText: 'Search...',
-        hintStyle: TextStyle(
-          color: AppStyle.colorWhite
-        )
-      ),      
-      style: TextStyle(
-        color: AppStyle.colorWhite
-      ),
+          prefixIcon: Icon(Icons.search, color: AppStyle.colorWhite),
+          hintText: 'Search...',
+          hintStyle: TextStyle(color: AppStyle.colorWhite)),
+      style: TextStyle(color: AppStyle.colorWhite),
     );
     _searchQuery = '';
   }
 
-  void _refreshSearch(String text){
-    setState((){
+  void _refreshSearch(String text) {
+    setState(() {
       if (_searchIcon == Icons.search) {
         _searchIcon = Icons.close;
       } else {
@@ -62,10 +52,8 @@ class _AtividadesPageState extends State<AtividadesPage>{
     });
   }
 
-  Future<void> _onRefresh(AtividadeBloc _bloc) async{
-    _bloc.dispatch(AtividadeLoad(
-      evento: _bloc.currentEvento
-    ));
+  Future<void> _onRefresh(AtividadeBloc _bloc) async {
+    _bloc.dispatch(AtividadeLoad(evento: _bloc.currentEvento));
   }
 
   _selectAtividade(
@@ -73,47 +61,42 @@ class _AtividadesPageState extends State<AtividadesPage>{
     AtividadeBloc _bloc,
     BuildContext context,
   ) async {
-    _bloc.dispatch(AtividadeApply(
-      chosenAtividade: atividade
-    ));
-     await Navigator.of(context).push(SlideRoute(
-      page: TurmasPage(),
-      direction: SlideDirection.BOTTOM_TOP
-    ));
+    _bloc.dispatch(AtividadeApply(chosenAtividade: atividade));
+    await Navigator.of(context).push(
+        SlideRoute(page: TurmasPage(), direction: SlideDirection.BOTTOM_TOP));
   }
 
   @override
   Widget build(BuildContext context) {
-    final AtividadeBloc _atividadeBloc = BlocProvider.of<AtividadeBloc>(context);
+    final AtividadeBloc _atividadeBloc =
+        BlocProvider.of<AtividadeBloc>(context);
 
     return BlocListener(
       bloc: _atividadeBloc,
-      listener: (context, state){
+      listener: (context, state) {
         if (state is AtividadeLoadFailed)
-          SimpleSnackBar.showSnackBar(
-            context,
-            state.error.message
-          );
-      
+          SimpleSnackBar.showSnackBar(context, state.error.message);
       },
       child: BlocBuilder(
         bloc: _atividadeBloc,
-        builder: (context, state){
-
+        builder: (context, state) {
           final List<AtividadeModel> _current =
-            (state is AtividadeLoading || state is AtividadeEmpty) ?
-            [] : state.atividades;
+              (state is AtividadeLoading || state is AtividadeEmpty)
+                  ? []
+                  : state.atividades;
 
-          final List<AtividadeModel> _atividades = _searchQuery.isNotEmpty ?
-            _current.where((a) => 
-              a.nome.toLowerCase().contains(_searchQuery.toLowerCase())
-            ).toList() : _current;
-          
+          final List<AtividadeModel> _atividades = _searchQuery.isNotEmpty
+              ? _current
+                  .where((a) =>
+                      a.nome.toLowerCase().contains(_searchQuery.toLowerCase()))
+                  .toList()
+              : _current;
+
           return Scaffold(
             appBar: AppBar(
-              title: _searchIcon == Icons.search ?
-                Text('Atividades - ${state.evento?.nome ?? ""}') :
-                _appBarSearchTitle,
+              title: _searchIcon == Icons.search
+                  ? Text('Atividades - ${state.evento?.nome ?? ""}')
+                  : _appBarSearchTitle,
               actions: <Widget>[
                 IconButton(
                   icon: Icon(_searchIcon),
@@ -122,7 +105,7 @@ class _AtividadesPageState extends State<AtividadesPage>{
               ],
             ),
             body: LiquidPullToRefresh(
-              onRefresh: () => _onRefresh(_atividadeBloc),	
+              onRefresh: () => _onRefresh(_atividadeBloc),
               showChildOpacityTransition: false,
               height: AppStyle.pullHeight,
               color: Colors.black,
@@ -139,16 +122,15 @@ class _AtividadesPageState extends State<AtividadesPage>{
                     onTap: () => _selectAtividade(
                       _atividades[index],
                       _atividadeBloc,
-                      context
+                      context,
                     ),
                   ),
-                )
+                ),
               ),
-            )
+            ),
           );
         },
-      )
+      ),
     );
   }
-
 }

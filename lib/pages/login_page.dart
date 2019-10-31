@@ -14,7 +14,6 @@ import 'package:joparpet_app/widgets/commons/loading_widget.dart';
 // Models
 import 'package:joparpet_app/models/authorization.dart';
 
-import 'atividades_page.dart';
 
 class LoginPage extends StatelessWidget {
 

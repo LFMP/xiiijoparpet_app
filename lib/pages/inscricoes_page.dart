@@ -1,9 +1,7 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 // Bloc
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:joparpet_app/blocs/inscricao.dart';
 import 'package:joparpet_app/blocs/presenca.dart';
 // Utils
@@ -29,30 +27,6 @@ class _InscricoesPageState extends State<InscricoesPage> {
 
   void _selectInscricao(InscricaoModel inscricao, BuildContext context) async {
     print(inscricao.inscrito.usuario.id);
-  }
-
-  Future<void> _sortInscrito(
-    BuildContext context,
-    List<InscricaoModel> inscritos,
-  ) async {
-    return showDialog<void>(
-      context: context,
-      barrierDismissible: false,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text("Sorteado"),
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(20.0))),
-          content: Text(inscritos[new Random().nextInt(inscritos.length)].nome),
-          actions: <Widget>[
-            FlatButton(
-              child: Text("OK"),
-              onPressed: () => Navigator.of(context).pop(),
-            ),
-          ],
-        );
-      },
-    );
   }
 
   void _toScanPage(BuildContext context, InscricaoBloc _bloc) async {
@@ -144,12 +118,15 @@ class _InscricoesPageState extends State<InscricoesPage> {
                 itemBuilder: (context, index) => Card(
                   child: ListTile(
                     leading: CircleAvatar(
-                      backgroundColor: AppStyle.colorPigmentGreen,
+                      backgroundColor: Colors.black,
                       child: Text(index.toString()),
                     ),
                     title: Text(
                       _inscricoes[index].nome,
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
                     subtitle: Text(_inscricoes[index].description),
                     onTap: () => _selectInscricao(_inscricoes[index], context),

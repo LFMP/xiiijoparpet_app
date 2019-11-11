@@ -33,10 +33,18 @@ class _AtividadesPageState extends State<AtividadesPage> {
     _appBarSearchTitle = TextField(
       controller: _searchController,
       decoration: InputDecoration(
-          prefixIcon: Icon(Icons.search, color: AppStyle.colorWhite),
-          hintText: 'Search...',
-          hintStyle: TextStyle(color: AppStyle.colorWhite)),
-      style: TextStyle(color: AppStyle.colorWhite),
+        prefixIcon: Icon(
+          Icons.search,
+          color: AppStyle.colorWhite,
+        ),
+        hintText: 'Search...',
+        hintStyle: TextStyle(
+          color: AppStyle.colorWhite,
+        ),
+      ),
+      style: TextStyle(
+        color: AppStyle.colorWhite,
+      ),
     );
     _searchQuery = '';
   }
@@ -115,10 +123,17 @@ class _AtividadesPageState extends State<AtividadesPage> {
                   child: ListTile(
                     title: Text(
                       _atividades[index].nome,
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                    subtitle: Text(_atividades[index].categoriaNome),
-                    trailing: Icon(Icons.keyboard_arrow_right),
+                    subtitle: Text(
+                      _atividades[index].categoriaNome,
+                    ),
+                    trailing: Icon(
+                      Icons.keyboard_arrow_right,
+                      color: Colors.teal[200],
+                    ),
                     onTap: () => _selectAtividade(
                       _atividades[index],
                       _atividadeBloc,

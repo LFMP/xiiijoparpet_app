@@ -76,7 +76,10 @@ class _EventsPageState extends State<EventsPage> {
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
                               subtitle: Text(_events[index].description),
-                              trailing: Icon(Icons.keyboard_arrow_right),
+                              trailing: Icon(
+                                Icons.keyboard_arrow_right,
+                                color: Colors.teal[200],
+                              ),
                               onTap: () => _selectEvento(
                                   _events[index], _eventoBloc, context),
                             ),

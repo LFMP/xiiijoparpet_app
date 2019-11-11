@@ -11,10 +11,11 @@
 .pub-cache/
 .pub/
 build/
+android/.gradle/*
 
 # Android related
 **/android/**/gradle-wrapper.jar
-**/android/.gradle
+**/android/.gradle/*
 **/android/captures/
 **/android/gradlew
 **/android/gradlew.bat
@@ -55,3 +56,13 @@ build/
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 
 # End of https://www.gitignore.io/api/flutter
+android/.gradle/4.10.2/fileHashes/fileHashes.bin
+android/.gradle/4.10.2/fileHashes/fileHashes.lock
+android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin
+android/.gradle/4.10.2/javaCompile/jarAnalysis.bin
+android/.gradle/4.10.2/javaCompile/javaCompile.lock
+android/.gradle/4.10.2/javaCompile/taskHistory.bin
+android/.gradle/4.10.2/taskHistory/taskHistory.bin
+android/.gradle/4.10.2/taskHistory/taskHistory.lock
+android/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.packages

@@ -14,8 +14,7 @@ import 'package:joparpet_app/repositories/presenca_repository.dart';
 import 'package:joparpet_app/models/presenca.dart';
 import 'package:joparpet_app/models/api_response.dart';
 
-class PresencaBloc extends Bloc<PresencaEvent, PresencaState>{
-
+class PresencaBloc extends Bloc<PresencaEvent, PresencaState> {
   final AuthBloc authBloc;
 
   PresencaBloc({@required this.authBloc});
@@ -26,33 +25,26 @@ class PresencaBloc extends Bloc<PresencaEvent, PresencaState>{
   PresencaModel get currentPresenca => currentState.presenca;
   InscricaoModel get currentInscricao => currentState.inscricao;
 
-  
   @override
   Stream<PresencaState> mapEventToState(PresencaEvent event) async* {
-
     if (event is PresencaSet) {
-      final _currentInscricao =  event.inscricao;
+      final _currentInscricao = event.inscricao;
       yield PresencaLoading(_currentInscricao);
 
       final _currentDia = event.dia;
 
       final presenca = PresencaModel(
-        inscricaoId: _currentInscricao.id,
-        diaId: _currentDia?.id ?? -1,
-        dataPresenca: DateTime.now(),
-        responsavelPresencaId: authBloc.userId
-      );
+          inscricaoId: _currentInscricao.id,
+          id: _currentInscricao.id,
+          diaId: _currentDia?.id ?? -1,
+          dataPresenca: DateTime.now(),
+          responsavelPresencaId: authBloc.userId);
 
-      final presencaResponse = await PresencaRepository.setPresenca(
-        presenca,
-        authBloc.token
-      );
-      
+      final presencaResponse =
+          await PresencaRepository.setPresenca(presenca, authBloc.token);
+
       if (presencaResponse.isSucessfull)
-        yield PresencaSetSucessfull(
-          presenca,
-          _currentInscricao
-        );
+        yield PresencaSetSucessfull(presenca, _currentInscricao);
       else
         yield PresencaSetFailed(
           presenca,
@@ -60,6 +52,5 @@ class PresencaBloc extends Bloc<PresencaEvent, PresencaState>{
           error: (presencaResponse as APIError),
         );
     }
-
   }
 }

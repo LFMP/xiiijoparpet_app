@@ -9,6 +9,13 @@ abstract class PresencaEvent extends Equatable {
   PresencaEvent([List props = const []]) : super(props);
 }
 
+class PresencaFilter extends PresencaEvent {
+  final InscricaoModel inscricao;
+  
+
+  PresencaFilter(this.inscricao);
+}
+
 class PresencaSet extends PresencaEvent {
   final InscricaoModel inscricao;
   final DiaModel dia;

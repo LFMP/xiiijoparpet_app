@@ -69,7 +69,10 @@ class _TurmasPageState extends State<TurmasPage> {
                     subtitle: Text(_turmas[index].description),
                     trailing: _authBloc.realm == "Petiano" ||
                             _authBloc.realm == "Ajudante"
-                        ? Icon(Icons.keyboard_arrow_right)
+                        ? Icon(
+                            Icons.keyboard_arrow_right,
+                            color: Colors.teal[200],
+                          )
                         : null,
                     onTap: () => _authBloc.realm == "Petiano" ||
                             _authBloc.realm == "Ajudante"

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 // Bloc
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -26,7 +25,7 @@ class _InscricoesPageState extends State<InscricoesPage> {
   }
 
   void _selectInscricao(InscricaoModel inscricao, BuildContext context) async {
-    print(inscricao.inscrito.usuario.id);
+    print(inscricao.inscritoId);
   }
 
   void _toScanPage(BuildContext context, InscricaoBloc _bloc) async {
@@ -103,7 +102,7 @@ class _InscricoesPageState extends State<InscricoesPage> {
             ),
             floatingActionButton: FloatingActionButton(
               onPressed: () => _toScanPage(context, _inscricaoBloc),
-              backgroundColor: Colors.red,
+              backgroundColor: Colors.teal[200],
               child: Icon(
                 Icons.camera_alt,
               ),
@@ -119,13 +118,18 @@ class _InscricoesPageState extends State<InscricoesPage> {
                   child: ListTile(
                     leading: CircleAvatar(
                       backgroundColor: Colors.black,
-                      child: Text(index.toString()),
+                      child: Text(
+                        index.toString(),
+                        style: TextStyle(
+                          color: Colors.teal[200],
+                        ),
+                      ),
                     ),
                     title: Text(
                       _inscricoes[index].nome,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                        color: Colors.purple[200],
                       ),
                     ),
                     subtitle: Text(_inscricoes[index].description),

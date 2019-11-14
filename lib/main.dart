@@ -75,6 +75,17 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     final FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
     _firebaseMessaging.requestNotificationPermissions();
+    _firebaseMessaging.getToken().then((token) {
+      print("token: $token");
+    });
+    _firebaseMessaging.configure(
+      onMessage: (Map<String, dynamic> message) async {
+        print("on message $message");
+      },
+      onResume: (Map<String, dynamic> message) async {},
+      onLaunch: (Map<String, dynamic> message) async {},
+    );
+    _firebaseMessaging.setAutoInitEnabled(true);
     return MaterialApp(
       title: 'XIII JoparPET',
       navigatorObservers: [

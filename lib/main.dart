@@ -1,4 +1,7 @@
+import 'package:firebase_analytics/observer.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 // Pages
 import 'package:joparpet_app/pages/login_page.dart';
 // Bloc
@@ -64,12 +67,19 @@ void main() {
   ], child: App()));
 }
 
+FirebaseAnalytics analytics = FirebaseAnalytics();
+
 class App extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
+    _firebaseMessaging.requestNotificationPermissions();
     return MaterialApp(
       title: 'XIII JoparPET',
+      navigatorObservers: [
+        FirebaseAnalyticsObserver(analytics: analytics),
+      ],
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.black,

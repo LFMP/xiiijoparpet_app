@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "183329670712",
+    "firebase_url": "https://xiiijoparpet.firebaseio.com",
+    "project_id": "xiiijoparpet",
+    "storage_bucket": "xiiijoparpet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183329670712:android:3c2eea5fae18e5022ac8cd",
+        "android_client_info": {
+          "package_name": "com.petinformaticauem.xiiijoparpet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "183329670712-oqds6m8dk8dcqnhvlpgrald3f1jnooon.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpGzPHs2gTJpSs0nmisxNzPg8l7AcXIDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "183329670712-oqds6m8dk8dcqnhvlpgrald3f1jnooon.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

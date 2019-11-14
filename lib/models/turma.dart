@@ -92,7 +92,9 @@ class DiaModel {
       : DiaModel(
           cargaHoraria:
               json["cargaHoraria"] == null ? null : json["cargaHoraria"],
-          dia: json["dia"] == null ? null : DateTime.parse(json["dia"]),
+          dia: json["dia"] == null
+              ? null
+              : DateTime.parse(json["dia"]).toLocal(),
           id: json["id"] == null ? null : json["id"],
           turmaId: json["turmaId"] == null ? null : json["turmaId"],
         );
